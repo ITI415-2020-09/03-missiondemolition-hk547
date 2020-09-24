@@ -447,6 +447,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282469984}
   - component: {fileID: 282469983}
+  - component: {fileID: 282469982}
   m_Layer: 0
   m_Name: ProjectileLine
   m_TagString: Untagged
@@ -454,6 +455,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &282469982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 282469981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e1be0e174e158e4682ef655f7d090d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minDist: 0.1
 --- !u!120 &282469983
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -496,10 +510,10 @@ LineRenderer:
   m_SortingOrder: 0
   m_Positions:
   - {x: 0, y: 0, z: 0}
-  - {x: 0, y: 0, z: 1}
+  - {x: 0, y: 0, z: 0}
   m_Parameters:
     serializedVersion: 3
-    widthMultiplier: 1
+    widthMultiplier: 0.1
     widthCurve:
       serializedVersion: 2
       m_Curve:
@@ -706,13 +720,29 @@ MonoBehaviour:
   - {fileID: 6367652733240728728, guid: b4dae076ef9553a458ba1e317dbd81f3, type: 3}
   - {fileID: 6367652733240728728, guid: d4af6a01c2aa89144a610e26870522d2, type: 3}
   - {fileID: 6367652733240728728, guid: ddb20d949335b98499d67cf65a1f4116, type: 3}
-  - {fileID: 6367652733240728728, guid: 4f70eab2dd9be42458cd8cddd50c1ce8, type: 3}
   level: 0
   levelMax: 0
   shotsTaken: 0
   castle: {fileID: 0}
   mode: 0
   showing: Show Slingshot
+--- !u!1 &975505751 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4744946766592419765, guid: 48cdd36c023acba48bfd512f29161b0c, type: 3}
+  m_PrefabInstance: {fileID: 5189826392422754908}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &975505756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 975505751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10f2487ad8b2ab24db11ebd88e25f906, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1141835840
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,9 +1372,9 @@ MonoBehaviour:
   launchPoint: {fileID: 1536571318}
   launchPos: {x: 0, y: 0, z: 0}
   projectile: {fileID: 7754852412111759913, guid: 09b5f8a60eda45647b80fa116ad65915, type: 3}
-  aimingMode: 0
+  aimingMode: 1
   prefabProjectile: {fileID: 7754852412111759913, guid: 09b5f8a60eda45647b80fa116ad65915, type: 3}
-  velocityMult: 8
+  velocityMult: 9
 --- !u!1 &1712172140
 GameObject:
   m_ObjectHideFlags: 0
@@ -1415,7 +1445,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Level 0 of 4
+  m_Text: Level 0 of 2
 --- !u!222 &1712172143
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1596,6 +1626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cloud
       objectReference: {fileID: 0}
+    - target: {fileID: 1523466942471284622, guid: 38a63b2ec7958ca46be7f85fb22e5acb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 38a63b2ec7958ca46be7f85fb22e5acb, type: 3}
 --- !u!1001 &5189826392422754908
@@ -1615,11 +1649,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7047311602011363550, guid: 48cdd36c023acba48bfd512f29161b0c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 7047311602011363550, guid: 48cdd36c023acba48bfd512f29161b0c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2
+      value: -7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7047311602011363550, guid: 48cdd36c023acba48bfd512f29161b0c, type: 3}
       propertyPath: m_LocalPosition.z

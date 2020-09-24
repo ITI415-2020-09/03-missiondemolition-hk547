@@ -10,6 +10,7 @@ public class ProjectileLine : MonoBehaviour
     private LineRenderer line;
     private GameObject _poi;
     private List<Vector3> points;
+    
     void Awake()
     {
         S = this; // Set the singleton

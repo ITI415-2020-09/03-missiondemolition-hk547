@@ -90,7 +90,7 @@ public class MissionDemolition : MonoBehaviour
         StartLevel();
     }
     public void SwitchView(string eView = "")
-    { // c
+    { 
         if (eView == "")
         {
             eView = uitButton.text;
@@ -114,7 +114,7 @@ public class MissionDemolition : MonoBehaviour
     }
     // Static method that allows code anywhere to increment shotsTaken
     public static void ShotFired()
-    { // d
+    { 
         S.shotsTaken++;
     }
 }

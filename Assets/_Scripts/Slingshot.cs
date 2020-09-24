@@ -17,7 +17,7 @@ public class Slingshot : MonoBehaviour
     private Rigidbody projectileRigidbody;
 
     static public Vector3 LAUNCH_POS
-    { // b
+    { 
         get
         {
             if (S == null) return Vector3.zero;
@@ -93,6 +93,7 @@ public class Slingshot : MonoBehaviour
             //the mouse has been released
             aimingMode = false;
             projectileRigidbody.isKinematic = false;
+            projectileRigidbody.velocity = -mouseDelta * velocityMult;
             FollowCam.POI = projectile;
             projectile = null;
 
