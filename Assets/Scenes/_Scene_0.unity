@@ -660,6 +660,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   launchPoint: {fileID: 0}
+  launchPos: {x: 0, y: 0, z: 0}
+  projectile: {fileID: 0}
+  aimingMode: 0
+  prefabProjectile: {fileID: 7754852412111759913, guid: 09b5f8a60eda45647b80fa116ad65915, type: 3}
+  velocityMult: 8
 --- !u!1 &1968072558
 GameObject:
   m_ObjectHideFlags: 0
