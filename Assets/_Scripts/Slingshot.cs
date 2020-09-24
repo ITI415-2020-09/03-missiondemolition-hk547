@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Slingshot : MonoBehaviour
 {
+    static private Slingshot S;
+
     public GameObject launchPoint;
 
     public Vector3 launchPos;
@@ -14,8 +16,19 @@ public class Slingshot : MonoBehaviour
     public float velocityMult = 8f;
     private Rigidbody projectileRigidbody;
 
+    static public Vector3 LAUNCH_POS
+    { // b
+        get
+        {
+            if (S == null) return Vector3.zero;
+            return S.launchPos;
+        }
+    }
+
     private void Awake()
     {
+        S = this;
+
         //transform.Find("") searches for a child of slingshot named launchpoint and returns its transform
         Transform launchPointTrans = transform.Find("LaunchPoint");
         launchPoint = launchPointTrans.gameObject;
